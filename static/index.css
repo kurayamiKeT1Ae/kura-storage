@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 16px;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #1f2937;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 32px;
+}
+
+h2 {
+    margin-top: 32px;
+}
+#upload-form{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+#upload-input{
+    flex: 1;
+    padding: 10px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 10px;
+    background: #f8fafc;
+    cursor: pointer;
+}
+
+#upload-input:hover{
+    border-color: #3b82f6;
+    background: #eff6ff;
+}
+
+/* زر Choose File */
+#upload-input::file-selector-button{
+    padding: 10px 18px;
+    margin-right: 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: .2s;
+}
+
+#upload-input::file-selector-button:hover{
+    background: #1d4ed8;
+}
+
+#upload-button{
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: .2s;
+}
+#upload-message {
+    display: none;
+    position: relative;
+
+    padding: 14px 45px 14px 16px;
+
+    border-radius: 8px;
+    border: 1px solid;
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#upload-message.show {
+    display: block;
+}
+
+#upload-message.success {
+    background: #dcfce7;
+    color: #166534;
+    border-color: #86efac;
+}
+
+#upload-message.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border-color: #fca5a5;
+}
+
+#message-close {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+
+    transform: translateY(-50%);
+
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: inherit;
+    opacity: .7;
+}
+
+#message-close:hover {
+    opacity: 1;
+}
+
+#files {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.file {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 105px 75px;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding: 16px 18px;
+
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    transition: transform .5s ease, opacity .5s ease;
+}
+
+.file.removing {
+    transform: translateX(-120px);
+    opacity: 0;
+
+}
+
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.file-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.file-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.file-buttons button {
+    border: none;
+    border-radius: 7px;
+    padding: 8px 12px;
+
+    color: white;
+    cursor: pointer;
+}
+
+.download-button {
+    border: none;
+    border-radius: 8px;
+    padding: 5px 12px;
+    margin-right: 10px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+.download-button:hover {
+    background: #1d4ed8;
+}
+
+.delete-button {
+    border: none;
+    border-radius: 8px;
+    padding: 5px 12px;
+
+    background: #dc2626;
+    color: white;
+
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background: #b91c1c;
+}
+
+@media (max-width: 600px) {
+    #upload-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .file {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .file-buttons {
+        width: 100%;
+    }
+
+    .file-buttons button {
+        flex: 1;
+    }
+}

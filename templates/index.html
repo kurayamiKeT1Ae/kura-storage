@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Storage Server</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+
+    <main>
+        <h1>Storage Server</h1>
+
+        <form id="upload-form" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="upload-input" required>
+            <button id="upload-button" type="submit">Upload</button>
+        </form>
+
+        <p id="upload-message"></p>
+
+        <h2>Files</h2>
+
+
+        <div id="files">
+            <!-- {% for file in files %}
+                <div class="file">
+                    <span>{{ file }}</span>
+
+                    <button>Download</button>
+                    <button>Delete</button>
+                </div>
+            {% endfor %} -->
+        </div>
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    
+
+</body>
+</html>
