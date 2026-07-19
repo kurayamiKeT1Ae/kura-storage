@@ -1,0 +1,14 @@
+{
+    "1": {
+        "username": "kurayami",
+        "password": "scrypt:32768:8:1$MyL8fLBCtUxYxan6$faaeab42873418e6c601dd4ecc252cb83fc024ed716b7ca0cf8ca4a4bf5a0f698bfc80808c93acc34e5689cf46cf38f97b71628fcc60e7cc4e3c50a058ca6b36",
+        "created_at": "2026-07-19 08:35:32",
+        "storage_limit": 20
+    },
+    "2": {
+        "username": "ahmed",
+        "password": "scrypt:32768:8:1$B3XDQ00nUGbgqFtR$c4acf6049aa95b50cd833dd5026cc40b7d9ae65ce1097fa03b1b2bc344b091576e8e458cb9448e2ee22983b0dd326629e8877bf906d3158ac2e82257420c1fdf",
+        "created_at": "2026-07-19 10:24:16",
+        "storage_limit": 20
+    }
+}
